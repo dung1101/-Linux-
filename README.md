@@ -33,6 +33,7 @@ File ẩn được bắt đầu bằn dấu '.'
 Cách thức hoạt động : shell sẽ đọc các lệnh đó là tìm vị trí các file thực thi để thực hiện. Các file thực thi thường được lưu tại thư mục /bin, /sbin, /usr/bin, /usr/sbin, /opt.
 Có thể nhập trực tiếp hoặc thông qua shell script.
 Khi thực thi một câu lệnh shell sẽ tìm kiếm file thực thi của lênh đó thông qua PATH(biến môi trường chứa danh sách các thư mục cho file thực thi)
+
 | Command | Descrption |
 |---------|------------|
 |finger  username|	Kiểm tra xem shell nào được sử dụng|
@@ -142,8 +143,7 @@ Khi thực thi một câu lệnh shell sẽ tìm kiếm file thực thi của l�
 |---------|------------|
 |ps	|Thông tin về các tiến trình hiện đang chạy PID:process id,TTY,TIME,CMD:name program use process|
 |pstree|	Hiện thi tiến trình dưới dạng cây |
-|top	|Thông tin về các tiến trình có cạp nhật theo thời gian.Dòng đầu tiên chứa thông tin về thời gian mở máy ,sô user và load average(>1 hệ thống  gặp vấn đề).Dòng thứ 2 chứa thông tin về tổng ps , số ps run,sleep,stop,zombie.Dòng thứ 3 chưa thông tin về % thời gian mà CPU danh cho user ,system …Dòng thứ 4 chứa thông tin về RAM.Dòng thứ 5 chứa thông tin vè SWAP.Các dòn bên dưới là bảng hiển thị thông tin các ps như là pid, priority, nice value,
-virtual ,physic , share,status,%CPU,%MEM,cmd|
+|top	|Thông tin về các tiến trình có cạp nhật theo thời gian.Dòng đầu tiên chứa thông tin về thời gian mở máy ,sô user và load average(>1 hệ thống  gặp vấn đề).Dòng thứ 2 chứa thông tin về tổng ps , số ps run,sleep,stop,zombie.Dòng thứ 3 chưa thông tin về % thời gian mà CPU danh cho user ,system …Dòng thứ 4 chứa thông tin về RAM.Dòng thứ 5 chứa thông tin vè SWAP.Các dòn bên dưới là bảng hiển thị thông tin các ps như là pid, priority, nice value,virtual ,physic , share,status,%CPU,%MEM,cmd|
 |Kill –SiGKILL PID|Dừng tiến trình theo PID|
 |Kill -9 PID	|Dừng tiến trình theo PID|
 |At now + 5minutes	|Lên lịch cho process hoạt dộng|
