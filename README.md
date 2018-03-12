@@ -7,11 +7,23 @@
 |Route add|	Thêm route vào routing table cho đến khi reboot sẽ mất|
 |Route del	|Xóa route|
 # 14.Network file system
-# 15.iCSI
+## 14.1 NFS
+| |Mục tiêu, công dụng|Cơ chế sử dụng|Ngữ cảnh áp dụng|
+|-|-------------------|--------------|----------------|
+|Network file system (NFS)|là một giao thức dùng để chia sẻ tập tin và người dùng có thể thao tác với tập tin như trên máy của mình|NFS sử dụng thủ tục RPC(remotr procedure calls)để gửi nhân yêu cầu giữa mấy chủ và máy trạm.Dịch vụ portmap:dịch vụ quản lý yêu cầu RPC.|khi máy chủ muốn chia sẻ tập tin cho các máy trạm|
+## 14.2 Cấu hình nfs và sử dụng
+| Command | Descrption |
+|---------|------------|
+|nano /etc/export| chỉnh sửa lưu trữ danh sách tập tin được chia sẻ , địa chỉ ip được cấp quyền sử dụng và quyền là gì.sau khi thay đổi khởi động lại dịch vụ /home 220.123.14.14(rw)|
+|/etc/init.d/nfs restart |restart|
+|mount ipmaychu:/thumucchiase /thumucduocmount|đọc dữ liệu từ máy trạm cách 1|
+|nano file /etc/fstab|đọc dữ liệu từ máy trạm cách 2 tenserver:/thumucchise /thumucduocmount nfs|
+# 15.iSCSI
+## 15.1 iSCSI
 | |Mục tiêu, công dụng|Cơ chế sử dụng|Ngữ cảnh áp dụng|
 |-|-------------------|--------------|----------------|
 |iSCSI(internet Small Computer System interface)|Tạo một local disk trên máy với mọi chức năng nhưng dung lượng thực tế được quản lý ở trên máy chủ thông qua internet|	Máy chủ nơi chứa ổ cứng thật được gọi là iSCSI target và máy kết nối đến iSCSI được gọi là initiator|	Khi muốn tạo một local disk |
-## 15.1 Cấu hình target
+## 15.2 Cấu hình target
 | Command | Descrption |
 |---------|------------|
 |apt-get install iscsitarget iscsitarget-dkms|install|
@@ -20,7 +32,7 @@
 |nano /etc/default/iscsitarget|	thay đổi ISCSITARGET_ENABLE = true|
 |nano /etc/iet/ietd.conf|thêm vào 'Target iqn.year-month.domain: name' 'Lun 0 Path =/var/iscsi_disk/disk01.img,Type fileio' 'Initiator      -address 202.20.24.2' 'Incominguser user password'|
 |Service iscsitarget restart| 	Restart| 
-## 15.2 Cấu hình initiator
+## 15.3 Cấu hình initiator
 | Command | Descrption |
 |---------|------------|
 |apt-get install open-iscsi|	install|
@@ -42,7 +54,6 @@
 |Password encryption|	Mã hóa passwd|	Sử dụng hàm băm SHA-512|Áp dụng để mã hóa dữ liệu trong các giao thức SSH,SSL,TLS…|
 |Password aging|	Nhắc nhở người dùng thay đổi pass sau một khoảng thời gian|	Sử dụng câu lênh change |	|
 |Private /public key|	Thay thế cho user passwd phục vụ cho việc đăng nhập server từ xa nâng cao tính bảo mật|Private key được lưu trữ tại máy client và public key được lưu trữ tại máy server|ứng dụng trong SSH|
-
 ## 16.3 Tạo pirvate / public key 
 |  |Command | Descrption |
 |--|--------|------------|
@@ -57,6 +68,3 @@
 ||rm –rf ~/.ssh/id_rsa|	xóa key|
 |client|apt-get install openssh-client	|Install ssh|
 ||Ssh –i  ~/.ssh/id_rsa root@servermachine|	Đăng nhập |
-
-
-
