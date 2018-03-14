@@ -1,5 +1,5 @@
 # 1.Basic command
-##Shell
+## Shell
 * Là một chương trìnhthông dịch cho phép người dùng tương tác với hệ điều hành bằng dòng lệnh.Có nhiều shell như là sh ,csh, zsh, bash nhưng phổ biến nhất là bash .
 * Cách thức hoạt động : shell sẽ đọc các lệnh đó là tìm vị trí các file thực thi của lênh đó thông qua PATH(biến môi trường chứa danh sách các thư mục cho file thực thi). Các file thực thi thường được lưu tại thư mục /bin, /sbin, /usr/bin, /usr/sbin, /opt.
 * Có thể nhập trực tiếp câu lệnh hoặc thông qua shell script.
