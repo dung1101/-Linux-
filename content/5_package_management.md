@@ -1,4 +1,4 @@
-# 6.Package manament 
+# 5.Package manament 
 | Command |Sample |Descrption |
 |---------|-------|-----------|
 |apt|apt list –installed |Hiển thị tất cả các program đã được install |
