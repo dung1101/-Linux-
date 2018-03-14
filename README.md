@@ -1,7 +1,7 @@
 # Content
 1. [Basic Commands](./content/1_basic_commands.md)
 2. [Working with files](./content/2_working_with_files.md)
-3. [File System](./content/3_filesytem.md)
+3. [File System](./content/3_filesystem.md)
 4. [File Permissions](./content/4_file_permissions.md)
 5. [Package Management](./content/package_management.md)
 6. [Data Backup](./content/data_backup.md)
