@@ -1,5 +1,4 @@
 # 2.Working with file 
-## 2.1 File stream
 Khi các lệnh được thực hiện, mặc định có ba luồng file hoặc mô tả để sử dụng:
 * standard input (stdin):thông thường là bàn phím hoặc có thể là output của một câu lệnh
 * standard output (stdout):thường được in ra terminal cũng có thể là 1 file
