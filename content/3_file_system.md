@@ -4,6 +4,7 @@
 * Linux hỗ trợ các filesystem : ext3, ext4, btrfs, xfs(của linux) và vfat , ntfs, hfs(của các hệ điều hành khác).
 ## 3.2 Cấu trúc thư mục
 ta có thể tìm hiểu cấu trúc thư mục bằng câu lệnh man hier
+
 |Directory|	Usage|
 |---------|------|
 |/|Root:Đây là thư mục ở mức cao nhất.Tất cả các tệp tin và thư mục đều nằm trong thư mục này|
@@ -16,9 +17,9 @@ ta có thể tìm hiểu cấu trúc thư mục bằng câu lệnh man hier
 ||/etc/network dùng để quản lý dịch vụ network|
 ||/etc/rc.d. Nơi đây thường chứa các scripts dùng để start, stop, kiểm tra status cho các chương trình.|
 |/home|Home Directories:chứa thông tin, dữ liệu , cấu hình riêng cho từng user|
-|/lib|System Libraries:Chứa các file library hỗ trợ cho các file thực binary. Tên của các file library thường là ld* or lib*.so.*|
+|/lib|System Libraries:Chứa các file library hỗ trợ cho các file thực binary. Tên của các file library thường là ld,libhoặc so|
 |/lost+found|Vì một lý do bất ngờ nào đó như lỗi phần mềm, mất điện v..v, hệ thống có thể đổ vỡ. Khi khởi động lại, hệ thống sẽ kiểm tra lại hệ thống filesystem bằng lệnh fchk và cố gắng phục hồi lại các lỗi mà nó tìm thấy. Kết quả của việc này sẽ được lưu giữ trong thư mục /lost+found.|
-|/mnt – Mount Directory:Chứa các thư mục dùng để system admin thực hiện quá trình mount. Như đã nói, hệ điều hành Linux coi tất cả là các file và lưu giữ trên một cây chung. Đây chính nơi tạo ra các thư mục để ‘gắn’ các phân vùng ổ đĩa cứng cũng như các thiết bị khác vào. Sau khi được mount vào đây, các thiết bị hay ổ cứng được truy cập từ đây như là một thư mục|
+|/mnt|Mount Directory:Chứa các thư mục dùng để system admin thực hiện quá trình mount. Như đã nói, hệ điều hành Linux coi tất cả là các file và lưu giữ trên một cây chung. Đây chính nơi tạo ra các thư mục để ‘gắn’ các phân vùng ổ đĩa cứng cũng như các thiết bị khác vào. Sau khi được mount vào đây, các thiết bị hay ổ cứng được truy cập từ đây như là một thư mục|
 |/opt |Optional add-on Applications:Chứa các phần mềm và phần mở rộng không nằm trong phần cài đặt mặc định, thường là của hãng thứ ba|
 |/proc| Process Information|Chứa đựng thông tin về quá trình xử lý của hệ thống,thông tin về các process đang chạy ,thông tin tài nguyên hệ thống|
 |/tmp|Temporary Files:chứa các file được tạo với mục đích dùng tạm thời bởi hệ thống cũng như user. Các file bên dưới thư mục này được xóa đi khi hệ thống reboot hay shutdown|
