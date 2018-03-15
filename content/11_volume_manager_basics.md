@@ -1,9 +1,12 @@
-# 1.Volume manage basic
+# 11.Volume manage basic
 ## 11.1	Chia partition cho ổ cứng
 | Command | Descrption |
 |---------|------------|
 |Fdisk  /dev/sdx	|Cấu hình cho ổ cứng sdx : chia partition, thêm ,sửa ,xóa, chuyển đổi kiểu file…|
 |Fdisk –l |	Xem thông tin ổ cứng|
+|mkfs.ext4 /dev/sdx1|format ổ theo định dạng ext4|
+|mount /dev/sdx1 /hoctap|mount mềm sau khi reboot sẽ mất|
+|nano /etc/fstab|thêm vào /etc/fstab /hoctap ext4 default 0 0|
 ## 11.2	LVM
 |Mục tiêu, công dụng|Cơ chế sử dụng|Ngữ cảnh áp dụng|
 |-------------------|--------------|----------------|
