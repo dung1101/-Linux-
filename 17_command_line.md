@@ -1,0 +1,5 @@
+# 17.Command line
+|Command | Descrption |
+|--------|------------|
+|echo $PS1|in ra biến PS1|
+|export PS1='[\u@\h \W(customt)]# '|chỉnh sửa biến PS|
