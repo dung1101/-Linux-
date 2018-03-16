@@ -2,10 +2,10 @@
 
 ## Snapshot
   Snapshot là một tính năng rất hay của LVM, ý nghĩa của nó như sau:
-*Giúp lưu lại tình trạng của một logical volume (snapshot chỉ lưu những thay đổi so với lúc tạo snapshot)
-*Hỗ trợ khôi phục máy tính về một thời điểm đã được tạo snapshot trước đó
-*Snapshot giúp cho việc restore trở nên đơn giản hơn 
-*Nếu xảy ra bất cứ trục trặc gì, chỉ cần restore lại trạng thái đã tạo snapshot là xong.
+* Giúp lưu lại tình trạng của một logical volume (snapshot chỉ lưu những thay đổi so với lúc tạo snapshot)
+* Hỗ trợ khôi phục máy tính về một thời điểm đã được tạo snapshot trước đó
+* Snapshot giúp cho việc restore trở nên đơn giản hơn 
+* Nếu xảy ra bất cứ trục trặc gì, chỉ cần restore lại trạng thái đã tạo snapshot là xong.
 ```
 #tạo snapshot cho lvdemo1
 lvcreate -L 1G -s -n lvdemo1snap /dev/vgdemo/lvdemo1
