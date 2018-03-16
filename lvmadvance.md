@@ -8,7 +8,7 @@
 *Nếu xảy ra bất cứ trục trặc gì, chỉ cần restore lại trạng thái đã tạo snapshot là xong.
 ```
 #tạo snapshot cho lvdemo1
-lvcreate -L 1G -s lvdemo1snap /dev/vgdemo/lvdemo1
+lvcreate -L 1G -s -n lvdemo1snap /dev/vgdemo/lvdemo1
 
 #xóa snapshot
 lvremove /dev/vgdemo/lvdemo1
