@@ -22,6 +22,24 @@ Cung cấp 1 interface để quản lý cấu hình runtime và permanent thông
 | --state|trạng thái |
 |--list-all|hiển thị tất cả các rule của zone|
 |--permanent|thiết lập permanent|
+|--reload|tải lại firewall|
+
+Ví dụ
+```
+#thêm service vào firewall
+firewall-cmd --zone=public --add-service=ftp
+#xóa service khỏi firewall
+firewall-cmd --zone=public --remove-service=ftp
+#Thêm port
+firewall-cmd --permanent --zone=public --add-port=80/tcp
+#Xóa port khỏi firewall
+firewall-cmd --zone=public --remove-port=80/tcp
+#Thêm IP Address vào Firewalld
+firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.4" accept'
+#Remove IP khỏi firewalld
+firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.4" reject'
+```
+
 
 Chi tiết các option :http://www.firewalld.org/documentation/man-pages/firewall-cmd
 ### firewall-offline-cmd
