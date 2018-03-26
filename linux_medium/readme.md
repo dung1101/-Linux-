@@ -1,3 +1,5 @@
 # 1.[LVM](./content/lvmadvance.md)
 # 2.[FirewallD](./content/firewalld.md)
 # 3.[Iptables](./content/iptables.md)
+# 4.[Git](./content/git.md)
+# 5.[SELinux](./content/selinux.md)
