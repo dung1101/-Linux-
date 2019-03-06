@@ -8,7 +8,7 @@ Khi các lệnh được thực hiện, mặc định có ba luồng file hoặc
 |---------|------|-----------|
 |<||	đọc file |
 |>|ls /etc > file1|In kết quả câu lệnh ra file và ghi đè từ đầu|
-|>>|ls /etc>> file2|In kết quả câu lệnh ra file và ghi tiếp|
+|>>|ls /etc >> file2|In kết quả câu lệnh ra file và ghi tiếp|
 |2>|ls /etc/sdf 2> file3|in lỗi ra file|
 |&>|ls /etc/afc &> file4| in cả lỗi và kết quả câu lệnh|
 | \| | cat file5 \| grep etc|Sử dụng 2 câu lệnh kết quả câu lệnh thứ nhất là đầu vào cho câu lệnh thứ 2|
