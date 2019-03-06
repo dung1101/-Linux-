@@ -11,8 +11,7 @@ Khi các lệnh được thực hiện, mặc định có ba luồng file hoặc
 |>>|ls /etc>> file2|In kết quả câu lệnh ra file và ghi tiếp|
 |2>|ls /etc/sdf 2> file3|in lỗi ra file|
 |&>|ls /etc/afc &> file4| in cả lỗi và kết quả câu lệnh|
-| / | cat file5/grep etc|Sử dụng 2 câu lệnh kết quả câu lệnh thứ nhất là đầu vào cho câu lệnh thứ 2|
-|||/ ở đây là "gạch dọc"|
+| \| | cat file5 \| grep etc|Sử dụng 2 câu lệnh kết quả câu lệnh thứ nhất là đầu vào cho câu lệnh thứ 2|
 |find|find /etc conkien	|Tìm kiếm file hoặc thư mục có chứa thông tin cần tìm trên thư mục|
 |locate|locate caikim|Tìm kiếm kiếm đường dẫn trong một cơ sở dữ liệu tại /var/lib/mlocate/mlocate.db |
 |||dữ liệu được up date tự động bằng updatedb.Do đó tốc độ sẽ nhanh hơn find |
