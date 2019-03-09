@@ -16,14 +16,14 @@ Bảng này được gán tương ứng mỗi địa chỉ đích với một đ
 * Thời gian (tính theo giây) từ khi Router cập nhật lần cuối. 
 
 ## Cấu hình ip tĩnh 
-| Command | Descrption |
-|---------|------------|
-|nano /etc/network/interfaces|mở file cấu hình chỉnh sửa|
-||auto eth0|
-||iface eth0 inet static|
-||address 192.168.92.129|
-||netmask 255.255.255.0|
-||gateway 192.168.92.1|
+`sudo nano /etc/network/interfaces`:
+```
+auto eth0
+iface eth0 inet static
+address 192.168.92.129
+netmask 255.255.255.0
+gateway 192.168.92.1
+```
 
 ## Cấu hình ip động 
 ### DHCP(Dynamic Host Congfiguration Protocol)
@@ -34,8 +34,8 @@ Bảng này được gán tương ứng mỗi địa chỉ đích với một đ
 ||Dynamic : gán địa chỉ trong 1 khoảng thời gian||
 ||Manual : người quản trị DHCP server sẽ cấp địa chỉ bằng tay||
 
-| Command | Descrption |
-|---------|------------|
-|nano /etc/network/interfaces|mở file cấu hình chỉnh sửa|
-||auto eth0|
-||iface eth0 inet dhcp|
+`sudo nano /etc/network/interfaces`:
+```
+auto eth0
+iface eth0 inet dhcp
+```
