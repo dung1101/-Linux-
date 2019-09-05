@@ -37,3 +37,9 @@ Một crontab file có 5 trường xác định thời gian, cuối cùng là l�
 # * * * * * command to execute
 ```
 [https://crontab.guru/](https://crontab.guru/)
+
+
+
+```
+crontab -l | sed '/DJANGO/s/^/#/' | crontab -
+```
